@@ -1,0 +1,28 @@
+services:
+  redis:
+    image: "redis:7-alpine"
+    ports:
+      - "127.0.0.1:6379:6379"
+
+  db:
+    image: "postgres:17-alpine"
+
+    ports:
+      - "127.0.0.1:5432:5432"
+
+    volumes:
+      - './data/pg:/var/lib/postgresql/data'
+
+    environment:
+      POSTGRES_USER: loco
+      POSTGRES_PASSWORD: loco
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+
+volumes:
+  pg-data:
+

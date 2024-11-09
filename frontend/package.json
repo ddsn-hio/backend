@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "lint": "biome check src/",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1",
+    "@rsbuild/core": "^1",
+    "@rsbuild/plugin-react": "^1",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+}
