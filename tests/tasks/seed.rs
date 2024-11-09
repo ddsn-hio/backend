@@ -1,5 +1,5 @@
-use loco_rs::{boot::run_task, task, testing};
 use earth_echo::app::App;
+use loco_rs::{boot::run_task, task, testing};
 use serial_test::serial;
 
 #[tokio::test]
