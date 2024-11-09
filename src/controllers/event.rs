@@ -76,7 +76,6 @@ pub async fn remove(
     Path(id): Path<i32>,
     State(ctx): State<AppContext>,
 ) -> Result<Response> {
-
     let item = load_item(&ctx, id).await?;
     if item.user_id == auth.user.id {
         item.delete(&ctx.db).await?;
